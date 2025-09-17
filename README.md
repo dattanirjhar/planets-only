@@ -1,16 +1,11 @@
----
 
 ### `> K E P L E R // a vibe check`
-
-`________________________________________________`
 
 Yo. So you stumbled on this project. We're diving into NASA's data to sort the legit exoplanets from the space trash. It's a whole mood. We're here to expose the fakes and crown the real ones. No cap.
 
 ---
 
 ### `> the game plan`
-
-`________________`
 
 So like, how'd we do it? Easy.
 
