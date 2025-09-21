@@ -1,12 +1,8 @@
-```
-# > K E P L E R // a vibe check
-```
+# `> K E P L E R // a vibe check`
 
 Yo. So you stumbled on this project. We're diving into NASA's data to sort the legit exoplanets from the space trash. It's a whole mood. We're here to expose the fakes and crown the real ones. Straight up.
 
-```
-## > the game plan
-```
+## `> the game plan`
 
 So like, how'd we do it? It's a whole saga.
 
@@ -22,9 +18,7 @@ So like, how'd we do it? It's a whole saga.
 
     After all that, we were like, "what if we just mashed it all together?" So we built one big multi-class model to do everything at once. Then we brought in some challengers to see if they could do better. It's called main character energy.
 
-```
-## > spill the tea ☕
-```
+## `> spill the tea ☕`
 
 So what did we find out? Here's the breakdown.
 
@@ -46,9 +40,7 @@ The difference between a maybe and a hell yes? It's all about the quality.
 
     Zero Doubts: The real tea is in the details. A confirmed planet has measurements with tiny, almost non-existent error bars. It's not confident, it's certain. We don't do "idk" around here.
 
-```
-## > THE REMIX // RF vs. The Champs
-```
+## `> THE REMIX // RF vs. The Champs`
 
 So about that final boss model. Our first attempt (Random Forest) was solid. It hit 92.6% accuracy. Not bad.
 
@@ -56,9 +48,7 @@ But then we brought in the challengers: Gradient Boosting and XGBoost. And they 
 
 Both new models cranked the accuracy up to a clean 94.2%. They were way better at spotting the 'Candidates'—the ones the first model kept tripping over. Their strategy was also pretty straightforward: get obsessed with the top 3-4 features, especially the flags, and just rely on them for the win. Work smarter, not harder.
 
-```
-## > THE STRESS TEST // Enter the TESS data
-```
+## `> THE STRESS TEST // Enter the TESS data`
 
 Just when we thought we had the perfect models, we decided to push them. We grabbed a whole new dataset from the TESS mission (TOI_dataset.csv) to see if our Kepler-trained models could hang in a new environment.
 
@@ -66,9 +56,7 @@ And our OG Random Forest model? It got exposed.
 
 The accuracy tanked to ~62%. It turns out the TESS data is missing the false_positive_flags our model loved so much. Without its favorite cheat codes, the model pretty much gave up and started guessing everything was a 'Candidate'. It proved our first model wasn't a true planet hunter; it just learned to pass one specific test. Oof.
 
-```
-## > aight, run it
-```
+## `> aight, run it`
 
 Wanna see the magic? Fine. The whole story is in the scripts. Don't mess it up.
 
