@@ -6,17 +6,17 @@ Yo. So you stumbled on this project. We're diving into NASA's data to sort the l
 
 So like, how'd we do it? It's a whole saga.
 
-### DROP THE FAKES. 🚮
+### 1. DROP THE FAKES. 🚮
 
-    First, we built a model to spot the posers—the "False Positives." It learned their tells, their bad vibes, all of it. If it ain't a planet, it's gotta go.
+First, we built a model to spot the posers—the "False Positives." It learned their tells, their bad vibes, all of it. If it ain't a planet, it's gotta go.
 
-### CROWN THE REAL ONES. 👑
+### 2. CROWN THE REAL ONES. 👑
 
-    Then, for the ones left, we got picky. We trained another model to figure out what separates a "Confirmed" planet from a "Candidate" that just doesn't make the cut. This is the real glow up.
+Then, for the ones left, we got picky. We trained another model to figure out what separates a "Confirmed" planet from a "Candidate" that just doesn't make the cut. This is the real glow up.
 
-### THE FINAL BOSS. 👾
+### 3. THE FINAL BOSS. 👾
 
-    After all that, we were like, "what if we just mashed it all together?" So we built one big multi-class model to do everything at once. Then we brought in some challengers to see if they could do better. It's called main character energy.
+After all that, we were like, "what if we just mashed it all together?" So we built one big multi-class model to do everything at once. Then we brought in some challengers to see if they could do better. It's called main character energy.
 
 ## `> spill the tea ☕`
 
@@ -26,19 +26,19 @@ So what did we find out? Here's the breakdown.
 
 Turns out the fakes are loud about it. They give themselves away if you know the signs.
 
-    They're Flagged: The data literally has false_positive_flags. Our model just had to pay attention. 💅
+- They're Flagged: The data literally has false_positive_flags. Our model just had to pay attention. 💅
 
-    They're HUGE: They show up way too big, probably just some other star trying to steal the spotlight.
+- They're HUGE: They show up way too big, probably just some other star trying to steal the spotlight.
 
-    They're Shady: Their light signal is all over the place, not even centered on the star. Looks pretty suspicious.
+- They're Shady: Their light signal is all over the place, not even centered on the star. Looks pretty suspicious.
 
 ### // the glow up: 'maybe' to 'definitely'
 
 The difference between a maybe and a hell yes? It's all about the quality.
 
-    The Signal is Solid: A real one has a transit signal that's strong, clear, and unmistakable. No static, all facts.
+- The Signal is Solid: A real one has a transit signal that's strong, clear, and unmistakable. No static, all facts.
 
-    Zero Doubts: The real tea is in the details. A confirmed planet has measurements with tiny, almost non-existent error bars. It's not confident, it's certain. We don't do "idk" around here.
+- Zero Doubts: The real tea is in the details. A confirmed planet has measurements with tiny, almost non-existent error bars. It's not confident, it's certain. We don't do "idk" around here.
 
 ## `> THE REMIX // RF vs. The Champs`
 
@@ -62,22 +62,22 @@ Wanna see the magic? Fine. The whole story is in the scripts. Don't mess it up.
 
 ### // The Kepler Saga
 
-    analysis_v2.py -> Cleans the data, makes it look pretty.
+- analysis_v2.py -> Cleans the data, makes it look pretty.
 
-    feature_importance_v1.py -> The part where we call out the fakes.
+- feature_importance_v1.py -> The part where we call out the fakes.
 
-    confirmed_vs_candidate_v1.py -> The part where we find the real ones.
+- confirmed_vs_candidate_v1.py -> The part where we find the real ones.
 
-    multiclass_model_v1.py -> The all-in-one model. The OG.
+- multiclass_model_v1.py -> The all-in-one model. The OG.
 
-    multiclass_gradient_boosting_v1.py -> The remix. The better one. 👑
+- multiclass_gradient_boosting_v1.py -> The remix. The better one. 👑
 
-    multiclass_xgboost_v1.py -> The other better one. Also 👑.
+- multiclass_xgboost_v1.py -> The other better one. Also 👑.
 
 ### // The TESS Expansion
 
-    translate_toi_data_v2.py -> Translates the raw TESS data so our models can read it.
+- translate_toi_data_v2.py -> Translates the raw TESS data so our models can read it.
 
-    test_rf_on_toi.py -> The script that stress-tests the OG model and watches it fail.
+- test_rf_on_toi.py -> The script that stress-tests the OG model and watches it fail.
 
 All the visuals get dumped in the /charts folder. Go look. Or don't. Whatever.
