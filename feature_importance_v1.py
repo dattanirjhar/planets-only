@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
 # --- Setup ---
-file_path = "datasets/KOI_dataset_1.csv"
+file_path = "datasets/TOI.csv"
 output_dir = "charts"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
