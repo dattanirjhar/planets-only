@@ -13,19 +13,16 @@
 
 ```
 ============================================================================
-|                                                                          |
 |   [ BOOTING SYSTEM... ]                                                  |
 |   NASA-ARCHIVE: EXOPLANET_SURVEILLANCE_PROTOCOL // v2.7                  |
 |   > Access granted.                                                      |
 |   > Welcome, Operator.                                                   |
 |   > Initiating KEPLER CLASSIFIER CORE...                                 |
-|                                                                          |
 |        .  *           .       .   .                                      |
 |              .     .               *         .                           |
 |         .            .   .            *                                  |
 |   .          *            .    .              .                          |
 |         *        .                  *                                    |
-|                                                                          |
 ============================================================================
 ```
 
@@ -58,7 +55,7 @@ Let's vibe.
 
 We didn't just build *one* model. We built a **pipeline**.
 
-**Step 1: Weed the Garden**  
+**Step 1: Weed the Garden**
 ```
 > INITIALIZING FAKE_DETECTOR_v1.0...
 > LOADING FALSE_POSITIVE_CLASSIFIER...
@@ -67,20 +64,20 @@ We didn't just build *one* model. We built a **pipeline**.
 > STATUS: OPERATIONAL
 ```
 
-First model? A specialist. Its *only* job was to spot the **False Positives** — the cosmic fakes trying to pass as planets.  
+First model? A specialist. Its *only* job was to spot the **False Positives** — the cosmic fakes trying to pass as planets.
 It crushed this. `92.6%` accuracy right out the gate.
 
-Then we looked at the feature importance scores.  
+Then we looked at the feature importance scores.
 The model had found **cheat codes**.
 
-The Kepler dataset came pre-loaded with `koi_fpflag_*` columns — literally labeled flags that screamed *"this one's fake!"*  
-Our model learned to read the answer key.  
-Smart? Yes.  
+The Kepler dataset came pre-loaded with `koi_fpflag_*` columns — literally labeled flags that screamed *"this one's fake!"*
+Our model learned to read the answer key.
+Smart? Yes.
 *Too* smart? Also yes.
 
 ---
 
-**Step 2: Crown the Real Ones**  
+**Step 2: Crown the Real Ones**
 ```
 > INITIALIZING CONFIRMATION_PROTOCOL...
 > SEPARATING [CONFIRMED] FROM [CANDIDATE]...
@@ -104,33 +101,31 @@ The model had to learn *actual physics*.
 
 </div>
 
-Translation?  
-Confirmation isn't about *finding* a signal — it's about having a signal so clean, so precise, that there's zero room for doubt.  
+Translation?
+Confirmation isn't about *finding* a signal — it's about having a signal so clean, so precise, that there's zero room for doubt.
 The universe doesn't do "probably." It does **"definitely."**
 
 ---
 
-**Step 3: The Final Boss**  
+**Step 3: The Final Boss**
 ```
 > MERGING MODELS...
 > GRADIENT_BOOSTING.load()
 > XGBOOST.load()
 > MULTICLASS_FUSION: ACTIVE
-> 
 > [TRAINING COMPLETE]
 > FINAL_ACCURACY: 94.2%
-> 
 > ================================ MISSION ACCOMPLISHED
 ```
 
 We fused everything into a **multi-class mega-model**.  
 Gradient Boosting and XGBoost tag-teamed the problem.
 
-Final score?  
+Final score?
 **94.2% accuracy.**
 
-Mission accomplished.  
-Victory screen.  
+Mission accomplished.
+Victory screen.
 Roll credits.
 
 ...right?
@@ -152,14 +147,14 @@ Roll credits.
 
 We got cocky.
 
-So we asked the hard question:  
+So we asked the hard question:
 *"Is our 94% champion a real planet hunter, or just a Kepler specialist?"*
 
-Enter **TESS** — NASA's next-gen exoplanet telescope.  
+Enter **TESS** — NASA's next-gen exoplanet telescope.
 Different mission. Different data. Same universe.
 
-First problem?  
-The datasets spoke **different languages**.  
+First problem?
+The datasets spoke **different languages**.
 Column names didn't match. Labels were inconsistent. Data types? Chaos.
 
 We built `translate_toi_data_v2.py` to bridge the gap — a Rosetta Stone for space data.
@@ -173,21 +168,18 @@ We fed our Kepler-trained model the TESS data.
 ```
 > LOADING TESS_DATA...
 > APPLYING KEPLER_TRAINED_MODEL...
-> 
 > [WARNING] koi_fpflag_* COLUMNS NOT FOUND
 > [WARNING] PRIMARY FEATURES MISSING
 > [ERROR] MODEL COHERENCE DEGRADING
-> 
 > ACCURACY: 62.3%
-> 
 > ================================ CRITICAL FAILURE
 ```
 
-**Result?**  
+**Result?**
 Accuracy collapsed to **~62%**.
 
-The model *panicked*.  
-Why?  
+The model *panicked*.
+Why?
 TESS didn't have the `koi_fpflag_*` columns.
 
 Without its cheat codes, our champion **fell apart**.  
@@ -242,20 +234,20 @@ Forced the model to learn from the same raw signals that TESS provided.
 > REMOVING koi_fpflag_* COLUMNS...
 > ALIGNING KEPLER + TESS SCHEMAS...
 > APPLYING SURGICAL_CLEANING_v2...
-> 
+>
 > [====================] 100%
-> 
+>
 > unified_dataset.csv CREATED
 > CHEAT_CODES_PRESENT: FALSE
 > READY FOR TRAINING
 ```
 
-This wasn't easy.  
-Our first cleaning scripts were too aggressive — they nuked entire dataframes.  
+This wasn't easy.
+Our first cleaning scripts were too aggressive — they nuked entire dataframes.
 Classic real-world data science nightmare.
 
-We fixed it with a surgical, two-step approach:  
-1. Targeted drops for junk columns.  
+We fixed it with a surgical, two-step approach:
+1. Targeted drops for junk columns.
 2. Strategic fills for salvageable missing data.
 
 ---
@@ -272,7 +264,7 @@ We fixed it with a surgical, two-step approach:
 
 </div>
 
-**Attempt 1: The Unified Model**  
+**Attempt 1: The Unified Model**
 ```
 > unified_model_v1.py EXECUTING...
 > ACCURACY: 73.1%
@@ -280,10 +272,10 @@ We fixed it with a surgical, two-step approach:
 > STATUS: LEARNING
 ```
 
-First try? `~73%` accuracy.  
+First try? `~73%` accuracy.
 Better than the crash-and-burn, but still biased toward Kepler data.
 
-**Attempt 2: Hyperparameter Tuning**  
+**Attempt 2: Hyperparameter Tuning**
 ```
 > unified_model_tuned_v2.py EXECUTING...
 > APPLYING GridSearchCV...
@@ -293,30 +285,30 @@ Better than the crash-and-burn, but still biased toward Kepler data.
 > STATUS: SMARTER
 ```
 
-We brought in **GridSearchCV** to optimize the model's brain.  
-Result? `~74%` accuracy.  
+We brought in **GridSearchCV** to optimize the model's brain.
+Result? `~74%` accuracy.
 Smarter, but still biased.
 
-**Attempt 3: SMOTE (The Game-Changer)**  
+**Attempt 3: SMOTE (The Game-Changer)**
 ```
 > unified_model_smote_v3.py EXECUTING...
 > APPLYING SMOTE BALANCING...
 > GENERATING SYNTHETIC_MINORITY_SAMPLES...
-> 
+>
 > TRAINING ON BALANCED DATASET...
 > [====================] 100%
-> 
+>
 > ACCURACY: 74.3%
 > BIAS_DETECTED: MINIMAL
 > FAIRNESS_SCORE: ================== OPTIMAL
 > STATUS: WISE
 ```
 
-We used **SMOTE** (Synthetic Minority Over-sampling) to balance the training data.  
+We used **SMOTE** (Synthetic Minority Over-sampling) to balance the training data.
 This didn't just boost accuracy — it made the model *fair*.
 
-The numbers barely moved on paper.  
-But the *distribution* of intelligence shifted.  
+The numbers barely moved on paper.
+But the *distribution* of intelligence shifted.
 The model's ability to correctly classify the tricky minority classes in TESS data **skyrocketed**.
 
 ---
@@ -376,18 +368,18 @@ Open them. Witness the journey.
 
 ```
 ----------------------------------------------------------
-  MISSION DEBRIEF: CRITICAL INSIGHTS
+           MISSION DEBRIEF: CRITICAL INSIGHTS
 ----------------------------------------------------------
 ```
 
 </div>
 
 ### `> Accuracy != Intelligence`
-A model can score 94% and still be fragile.  
+A model can score 94% and still be fragile.
 If it's learned the dataset's quirks instead of the domain's truths, it'll shatter on new data.
 
 ### `> Cheat Codes Are a Trap`
-The `koi_fpflag_*` columns were helpful — until they weren't.  
+The `koi_fpflag_*` columns were helpful — until they weren't.
 Real-world deployment means encountering data that doesn't come with an answer key.
 
 ### `> Fairness > Raw Performance`
@@ -453,14 +445,14 @@ SMOTE balancing
 
 ## >> DATA ORIGINS // Source Material
 
-**Kepler KOI Dataset**  
+**Kepler KOI Dataset**
 ```
 SOURCE: NASA Exoplanet Archive
 SIZE:   Thousands of Kepler Objects of Interest
 STATUS: Cleaned, imputed, cheat codes stripped for unified training
 ```
 
-**TESS TOI Dataset**  
+**TESS TOI Dataset**
 ```
 SOURCE: NASA Transiting Exoplanet Survey Satellite
 SIZE:   TESS Objects of Interest
@@ -468,7 +460,7 @@ STATUS: Re-aligned to Kepler schema via translate_toi_data_v2.py
         Missing columns interpolated or zero-padded
 ```
 
-**Unified Dataset**  
+**Unified Dataset**
 ```
 SOURCE: Combined Kepler + TESS
 SIZE:   Cross-mission merged data
@@ -488,7 +480,7 @@ STATUS: No koi_fpflag_* columns. Pure signal-based features only.
 
 </div>
 
-This project is **open source** and released under the **GNU General Public License v3.0**.  
+This project is **open source** and released under the **GNU General Public License v3.0**.
 Translation? It's free. Forever. No corpo BS.
 
 ### `> What That Means:`
@@ -523,10 +515,10 @@ Freedom to Improve
 ============================================================================
 ```
 
-**Full license text:**  
+### **Full license text:**  
 [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-**TL;DR version:**  
+### **TL;DR version:**  
 [choosealicense.com/licenses/gpl-3.0](https://choosealicense.com/licenses/gpl-3.0/)
 
 ---
