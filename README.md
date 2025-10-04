@@ -4,10 +4,10 @@
 ![Planets Only!](https://img.shields.io/badge/planets%20only!-8A2BE2?style=for-the-badge)
 ![KEPLER](https://img.shields.io/badge/KEPLER-00B496?style=for-the-badge)
 ![EXOPLANETS](https://img.shields.io/badge/EXOPLANETS-EB5559?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/dattanirjhar/planets-only?display_timestamp=committer&style=for-the-badge&logoColor=violet)
-![GitHub Created At](https://img.shields.io/github/created-at/dattanirjhar/planets-only?style=for-the-badge)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/dattanirjhar/planets-only/main?style=for-the-badge)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/scikit-learn?style=for-the-badge&color=white)
+![GitHub last commit](https://img.shields.io/github/last-commit/dattanirjhar/planets-only?display_timestamp=committer&style=for-the-badge&logo=github)
+![GitHub Created At](https://img.shields.io/github/created-at/dattanirjhar/planets-only?style=for-the-badge&logo=github)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/dattanirjhar/planets-only/main?style=for-the-badge&logo=github)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/scikit-learn?style=for-the-badge&color=white&logo=python)
 ![GitHub License](https://img.shields.io/github/license/dattanirjhar/planets-only?style=for-the-badge&color=yellow)
 
 
