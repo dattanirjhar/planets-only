@@ -3,6 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/dattanirjhar/planets-only?display_timestamp=committer&style=for-the-badge&logoColor=violet)
 ![GitHub Created At](https://img.shields.io/github/created-at/dattanirjhar/planets-only)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/dattanirjhar/planets-only/main)
+![Static Badge](https://img.shields.io/badge/:badgeContent?logo=si-nasa)
 ![Static Badge](https://img.shields.io/badge/planets%20only!-8A2BE2)
 ![Static Badge](https://img.shields.io/badge/KEPLER-00B496)
 ![GitHub License](https://img.shields.io/github/license/dattanirjhar/planets-only)
