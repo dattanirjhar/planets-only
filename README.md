@@ -368,7 +368,7 @@ Open them. Witness the journey.
 
 ```
 ----------------------------------------------------------
-           MISSION DEBRIEF: CRITICAL INSIGHTS
+        MISSION DEBRIEF: CRITICAL INSIGHTS
 ----------------------------------------------------------
 ```
 
