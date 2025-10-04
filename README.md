@@ -1,7 +1,8 @@
 # `> K E P L E R // a vibe check`
 
-![Static Badge](https://img.shields.io/badge/planets%20only!-8A2BE2)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dattanirjhar/planets-only?display_timestamp=committer&style=for-the-badge&logoColor=violet)
+![GitHub Created At](https://img.shields.io/github/created-at/dattanirjhar/planets-only)
+![Static Badge](https://img.shields.io/badge/planets%20only!-8A2BE2)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/dattanirjhar/planets-only/main)
 
 
