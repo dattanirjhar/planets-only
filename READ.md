@@ -1,19 +1,19 @@
 # `> K E P L E R // a vibe check`
 
 ```
-[BOOTING SYSTEM...]  
-`NASA-ARCHIVE: EXOPLANET_SURVEILLANCE_PROTOCOL//v2.7`  
-`> Access granted.`  
-`> Welcome, Operator.`  
-`> Initiating KEPLER CLASSIFIER CORE...`  
+[BOOTING SYSTEM...]
+NASA-ARCHIVE: EXOPLANET_SURVEILLANCE_PROTOCOL//v2.7
+> Access granted.
+> Welcome, Operator.
+> Initiating KEPLER CLASSIFIER CORE...
 ```
 
-Yo. So you found **Project KEPLER**.  
-This isn’t your average data science gig.  
-We’re sifting through NASA’s deep-space archives — hunting for the real exoplanets hiding among the noise, lies, and cosmic impostors.  
+Yo. So you found **Project KEPLER**.
+This isn’t your average data science gig.
+We’re sifting through NASA’s deep-space archives — hunting for the real exoplanets hiding among the noise, lies, and cosmic impostors.
 
-This is **space forensics**.  
-We're here to **expose the fakes** and **crown the real ones**.  
+This is **space forensics**.
+We're here to **expose the fakes** and **crown the real ones**.
 Let’s vibe.
 
 ---
@@ -121,20 +121,20 @@ Here’s the blueprint.
 
 ### // The Kepler Saga
 ```
-analysis_v2.py                -> Cleans the data. Makes it shine. ✨  
-feature_importance_v1.py      -> Calls out the fakes. Savage.  
-confirmed_vs_candidate_v1.py  -> Finds the chosen ones.  
-multiclass_model_v1.py        -> The all-in-one OG model.  
-multiclass_gradient_boosting_v1.py -> The remix. The better one. 👑  
-multiclass_xgboost_v1.py      -> The rival champion. Also 👑.  
+analysis_v2.py                -> Cleans the data. Makes it shine. ✨
+feature_importance_v1.py      -> Calls out the fakes. Savage.
+confirmed_vs_candidate_v1.py  -> Finds the chosen ones.
+multiclass_model_v1.py        -> The all-in-one OG model.
+multiclass_gradient_boosting_v1.py -> The remix. The better one. 👑
+multiclass_xgboost_v1.py      -> The rival champion. Also 👑.
 ```
 
 ---
 
 ### // The TESS Expansion
 ```
-translate_toi_data_v2.py      -> Translates TESS into Kepler-speak.  
-test_rf_on_toi.py             -> Stress-tests the OG model... and watches it implode. 🔥  
+translate_toi_data_v2.py      -> Translates TESS into Kepler-speak.
+test_rf_on_toi.py             -> Stress-tests the OG model... and watches it implode. 🔥
 ```
 
 All charts and visual receipts live in the `/charts` folder.  
@@ -164,10 +164,10 @@ Open them if you dare. Or don’t. The void doesn’t care.
 
 ### 🧩 Tools & Libraries
 ```
-Python 3.11  
-scikit-learn 1.5  
-xgboost 2.1  
-pandas, numpy, matplotlib, seaborn  
+Python 3.11
+scikit-learn 1.5
+xgboost 2.1
+pandas, numpy, matplotlib, seaborn
 tqdm (for that hacker-progress-bar aesthetic)
 ```
 
@@ -179,22 +179,22 @@ tqdm (for that hacker-progress-bar aesthetic)
 >> SYSTEM NOTE: NO DATA LEFT BEHIND
 ```
 
-- **Kepler Data:** Pulled from NASA Exoplanet Archive.  
-  Cleaned, imputed missing values, filtered high-quality transit signals only.  
-- **TESS TOI Data:** Re-aligned to Kepler feature schema using `translate_toi_data_v2.py`.  
-  Missing columns were interpolated or zero-padded for testing cross-mission generalization.  
-- **Feature Importance:**  
-  Gradient Boosting ranked the `false_positive_flags` as the top indicators — proving bias toward flag-based metadata rather than pure signal metrics.  
+- **Kepler Data:** Pulled from NASA Exoplanet Archive.
+  Cleaned, imputed missing values, filtered high-quality transit signals only.
+- **TESS TOI Data:** Re-aligned to Kepler feature schema using `translate_toi_data_v2.py`.
+  Missing columns were interpolated or zero-padded for testing cross-mission generalization.
+- **Feature Importance:**
+  Gradient Boosting ranked the `false_positive_flags` as the top indicators — proving bias toward flag-based metadata rather than pure signal metrics.
 
 ---
 
 ## `> status: SYSTEMS NOMINAL`
 
 ```
-[CONNECTION STABLE]  
-[ALL MODELS DEPLOYED]  
-[WAITING FOR NEXT TRANSMISSION...]  
+[CONNECTION STABLE]
+[ALL MODELS DEPLOYED]
+[WAITING FOR NEXT TRANSMISSION...]
 ```
 
-`> End of Line.`  
-`> KEPLER OUT.`  
+### `══[ End of Line // KEPLER OUT ]══`
+### `> Transmission Complete`
