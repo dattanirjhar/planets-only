@@ -1,7 +1,7 @@
 # `> K E P L E R // a vibe check`
 
 ![NASA](https://img.shields.io/badge/SpaceApps-000000?style=for-the-badge&logo=nasa)
-![Planets Only!](https://img.shields.io/badge/planets%20only!-8A2BE2?style=for-the-badge)
+![Planets Only!](https://img.shields.io/badge/planets%20only!-FFFFFF?style=for-the-badge&logo=saturn&logoColor=black)
 ![KEPLER](https://img.shields.io/badge/KEPLER-00B496?style=for-the-badge)
 ![EXOPLANETS](https://img.shields.io/badge/EXOPLANETS-EB5559?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dattanirjhar/planets-only?display_timestamp=committer&style=for-the-badge&logo=github)
