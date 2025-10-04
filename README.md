@@ -7,7 +7,9 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/dattanirjhar/planets-only?display_timestamp=committer&style=for-the-badge&logoColor=violet)
 ![GitHub Created At](https://img.shields.io/github/created-at/dattanirjhar/planets-only?style=for-the-badge)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/dattanirjhar/planets-only/main?style=for-the-badge)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/scikit-learn?style=for-the-badge&color=white)
 ![GitHub License](https://img.shields.io/github/license/dattanirjhar/planets-only?style=for-the-badge&color=yellow)
+
 
 ```
 ============================================================================
