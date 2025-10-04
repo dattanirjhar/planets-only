@@ -14,11 +14,11 @@
 ```
 ============================================================================
 |                                                                          |
-|   [BOOTING SYSTEM...]                                                    |
-|   NASA-ARCHIVE: EXOPLANET_SURVEILLANCE_PROTOCOL//v2.7                   |
+|   [ BOOTING SYSTEM... ]                                                  |
+|   NASA-ARCHIVE: EXOPLANET_SURVEILLANCE_PROTOCOL // v2.7                  |
 |   > Access granted.                                                      |
 |   > Welcome, Operator.                                                   |
-|   > Initiating KEPLER CLASSIFIER CORE...                                |
+|   > Initiating KEPLER CLASSIFIER CORE...                                 |
 |                                                                          |
 |        .  *           .       .   .                                      |
 |              .     .               *         .                           |
