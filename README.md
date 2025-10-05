@@ -509,61 +509,61 @@ The final step: encapsulate the entire winning pipeline.
 
 ---
 
-## >> THE BLUEPRINT // File Structure
+## >> THE BLUEPRINT // Repository Structure
 
-### `// Act I: The Kepler Saga`
 ```
-draft.py                             | Initial EDA. First contact with data.
-analysis_v2.py                       | Deep dive analysis. Discovery phase.
-feature_importance_v1.py             | False Positive hunter. Found the cheat codes.
-confirmed_vs_candidate_v1.py         | Physics-based confirmation classifier.
-multiclass_model_v1.py               | First multi-class attempt.
-multiclass_gradient_boosting_v1.py   | Gradient Boosting entry. Strong contender.
-                                     | XGBoost champion selected. 94.2%.
-```
-
-### `// Act II: The Humbling`
-```
-translate_toi_data_v2.py             | TESS translator. Learned surgical cleaning.
-test_rf_on_toi.py                    | The stress test. The crash. The lesson.
-```
-
-### `// Act III: Redemption - K2 Track`
-```
-k2_featuremap.py                     | Feature intersection & surgical imputation.
-k2_randomforest.py                   | Weighted RF baseline (88.31% F1).
-                                     | Optimized version (89.27% F1).
-k2_xgboost.py                        | Champion validation (planned).
-```
-
-### `// Act III: Redemption - Mega Convergence`
-```
-create_unified_dataset_v2.py         | The unifier. Three missions, one dataset.
-mega_model.py                        | Baseline unified model (73%).
-advanced_feature_eng_mega.py         | Physics-based feature engineering.
-mega_model_hyperparameter.py         | Hyperparameter optimization (77.71%).
-mega_balanced_model.py               | SMOTE fairness experiment.
-mega_model_final.py                  | Champion configuration.
-final_production.py                  | Production pipeline. The final form.
-```
-
-### `// Datasets`
-```
-datasets/KOI_dataset_1.csv           | Kepler Objects of Interest
-datasets/TOI_dataset.csv             | TESS Objects of Interest
-datasets/K2_Dataset.csv              | K2 Mission data
-```
-
-### `// Output`
-```
-output/translated_data/
-  mega_unified_dataset.csv           | The unified, no-cheat-codes dataset
-  
-final_production_model.pkl           | Production-ready trained model
+planets-only/
+├── charts/                          | All visualizations, confusion matrices, proof
+│
+├── datasets/                        | Raw mission data
+│   ├── KOI_dataset_1.csv           | Kepler Objects of Interest
+│   ├── TOI_dataset.csv             | TESS Objects of Interest
+│   └── K2_Dataset.csv              | K2 Mission data
+│
+├── koi/                            | Act I: The Kepler Saga
+│   ├── draft.py                    | Initial EDA. First contact.
+│   ├── analysis_v2.py              | Deep dive analysis. Discovery phase.
+│   ├── feature_importance_v1.py    | False Positive hunter. Found cheat codes.
+│   ├── confirmed_vs_candidate_v1.py| Physics-based confirmation classifier.
+│   ├── multiclass_model_v1.py      | First multi-class attempt.
+│   └── multiclass_gradient_boosting_v1.py | GB + XGBoost. 94.2% champion.
+│
+├── toi/                            | Act II: The Humbling
+│   ├── translate_toi_data_v2.py    | TESS translator. Surgical cleaning.
+│   └── test_rf_on_toi.py           | The stress test. The crash. The lesson.
+│
+├── k2/                             | Act III: K2 Validation Track
+│   ├── k2_featuremap.py            | Feature intersection & surgical imputation.
+│   ├── k2_randomforest.py          | Weighted RF (88.31% -> 89.27% F1).
+│   └── k2_xgboost.py               | Champion validation (planned).
+│
+├── mega_model/                     | Act III: The Mega Convergence
+│   ├── create_unified_dataset_v2.py| The unifier. Three missions, one dataset.
+│   ├── mega_model.py               | Baseline unified model (73%).
+│   ├── advanced_feature_eng_mega.py| Physics-based feature engineering.
+│   ├── mega_model_hyperparameter.py| Hyperparameter optimization (77.71%).
+│   ├── mega_balanced_model.py      | SMOTE fairness experiment.
+│   └── mega_model_final.py         | Champion configuration.
+│
+├── unified/                        | Act III: Earlier unified attempts
+│   └── [legacy unified models]     | Historical TESS+Kepler work
+│
+├── output/                         | Generated artifacts
+│   └── translated_data/
+│       └── mega_unified_dataset.csv| The unified, no-cheat-codes dataset
+│
+├── final_production.py             | Production pipeline. The final form.
+├── requirements.txt                | Python dependencies
+├── LICENSE                         | GPL v3.0
+└── README.md                       | This file. The journey.
 ```
 
-All charts, confusion matrices, and visual proof live in `/charts`.  
-Open them. Witness the journey.
+The structure mirrors the narrative:
+- `koi/` contains the hubris
+- `toi/` contains the humbling  
+- `k2/` contains the validation
+- `mega_model/` contains the convergence
+- `final_production.py` contains the wisdom
 
 ---
 
