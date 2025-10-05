@@ -210,19 +210,27 @@ Because now we knew what we had to fix.
 <div align="center">
 
 ```diff
-+ NEW OBJECTIVE: Build a model that doesn't cheat.
++ NEW OBJECTIVE: Build models that don't cheat.
 + MISSION PARAMETERS: No flags. No shortcuts. Pure physics.
-+ GOAL: Unified intelligence across Kepler + TESS.
++ GOAL: Unified intelligence across multiple missions.
++ STRATEGY: Parallel development -> Final convergence
 ```
 
 </div>
 
 The failure taught us what we actually needed:  
-A model that could generalize. A model that learned the *fundamentals*, not the quirks.
+Models that could generalize. Models that learned the *fundamentals*, not the quirks.
 
-### `// Phase 1: Level the Playing Field`
+We split into **two parallel tracks** — TESS and K2 — each following the redemption playbook independently.
+Then we'd merge everything into one ultimate unified classifier.
 
-We created **`unified_dataset.csv`**.
+---
+
+### `// PARALLEL TRACK 1: TESS Redemption`
+
+#### **Phase 1: Level the Playing Field**
+
+We created **`unified_dataset.csv`** for TESS.
 
 The move?  
 We **stripped the cheat codes** from Kepler entirely.  
@@ -252,7 +260,7 @@ We fixed it with a surgical, two-step approach:
 
 ---
 
-### `// Phase 2: Make It Smarter`
+#### **Phase 2: Make It Smarter**
 
 <div align="center">
 
@@ -313,21 +321,148 @@ The model's ability to correctly classify the tricky minority classes in TESS da
 
 ---
 
-### `// The Final Form`
+### `// PARALLEL TRACK 2: K2 Redemption`
+
+While TESS was being conquered, we launched a **second parallel mission** using the K2 dataset and the NASA Planetary Systems Archive.
+
+The K2 mission was Kepler's second life — after a mechanical failure, it pivoted to new observing strategies.
+Different data structure. Different challenges. Same redemption playbook.
+
+#### **Phase 1: Feature Intersection & Surgical Imputation**
 
 ```
-============================================================================
-  UNIFIED_MODEL_SMOTE_v3.py
-  --------------------------------------------------------------------------
-  [x] No cheat codes
-  [x] Learns from pure signal physics
-  [x] Performs fairly across Kepler AND TESS missions
-  [x] Tuned for performance
-  [x] Balanced for justice
-
-  STATUS: Not just accurate. WISE.
-============================================================================
+> INITIALIZING K2_FEATURE_MAP...
+> DEFINING GENERALIZED PARAMETER SET...
+> DETECTING FEATURE INTERSECTION...
 ```
+
+The move?  
+We defined a **universal feature set** — 21 generalized parameters (like `pl_orbper`, `st_teff`) that existed across both K2 and the Planetary Systems (PS) archive.
+
+But there was a problem.  
+K2 had unique transit-specific features (`pl_trandep`, `pl_trandur`) that PS didn't have.
+
+**Solution: Surgical Imputation**
+```
+> ADDING TRANSIT FEATURES TO PS DATA...
+> IMPUTING MISSING VALUES -> 0
+> RATIONALE: Zero signal = No transit signal detected
+> 
+> [====================] 100%
+> 
+> STATUS: UNIFIED SCHEMA ACHIEVED
+> CLASS BALANCE: 4:1 (Not Confirmed : Confirmed)
+```
+
+This was a direct application of the lesson from Act II.  
+Instead of crashing on missing data, we *imputed strategically* — treating the absence of a transit signal in PS as "zero signal."
+
+The model could now train on both archives without breaking.
+
+---
+
+#### **Phase 2: Establish Fairness (Weighted Random Forest)**
+
+```
+> LOADING k2_randomforest.py...
+> APPLYING class_weight='balanced'...
+> CORRECTING 4:1 CLASS IMBALANCE...
+> 
+> [====================] 100%
+> 
+> BASELINE WEIGHTED F1-SCORE: 88.31%
+> CONFIRMED RECALL (Minority): 62.77%
+> STATUS: FAIR
+```
+
+The K2 data had a **brutal 4:1 class imbalance** — way more "Not Confirmed" planets than "Confirmed."
+
+We used a **Weighted Random Forest** with balanced class weights to give the minority class a fighting chance.
+
+<div align="center">
+
+| Metric | Baseline (Weighted RF) |
+|--------|------------------------|
+| Weighted F1-Score | **88.31%** |
+| Overall Accuracy | 88.70% |
+| Confirmed Recall | 62.77% |
+
+</div>
+
+This was the *fairness* step.  
+The model wasn't just accurate — it was paying attention to the rare confirmed planets.
+
+---
+
+#### **Phase 3: Make It Smarter (Randomized Search Optimization)**
+
+```
+> k2_randomforest.py EXECUTING...
+> APPLYING RandomizedSearchCV...
+> OPTIMIZING: n_estimators, max_depth, min_samples_split...
+> 
+> [====================] 100%
+> 
+> OPTIMIZED WEIGHTED F1-SCORE: 89.27%
+> CONFIRMED RECALL (Minority): 66.07%
+> BIAS_DETECTED: MINIMAL
+> STATUS: SMARTER
+```
+
+Hyperparameter tuning pushed the K2 model even further.
+
+<div align="center">
+
+| Metric | Baseline | Optimized |
+|--------|----------|-----------|
+| Weighted F1-Score | 88.31% | **89.27%** |
+| Overall Accuracy | 88.70% | 89.50% |
+| Confirmed Recall | 62.77% | **66.07%** |
+
+</div>
+
+That **3.3 percentage point boost** in Confirmed Recall?  
+That's the model getting *smarter* at finding the rare confirmed planets.
+
+---
+
+#### **Phase 4: The Champion (XGBoost on Cleaned Data)**
+
+```
+> LOADING k2_xgboost.py...
+> APPLYING XGBOOST TO UNIFIED K2 DATA...
+> INTENTION: Test performance ceiling
+> 
+> [PENDING EXECUTION]
+> 
+> GOAL: Confirm whether 89.27% is the limit or if we can push higher
+```
+
+The final step: Apply the **XGBoost champion model** to the perfectly cleaned, unified K2 data.
+
+This will test whether the 89.27% F1-score is the performance ceiling, or if there's more juice to squeeze.
+
+---
+
+### `// The Convergence (Coming Soon)`
+
+```
+> FINAL PHASE: INTEGRATION
+> MERGING TESS + K2 UNIFIED MODELS...
+> CREATING CROSS-MISSION MEGA-CLASSIFIER...
+> 
+> [PENDING]
+> 
+> GOAL: One model. All missions. Pure physics.
+```
+
+Both tracks followed the same playbook:
+1. Strip the cheat codes.
+2. Unify the schemas.
+3. Make it fair.
+4. Make it smart.
+
+Now comes the final boss: **merging everything into one ultimate unified classifier** that works across Kepler, TESS, K2, and beyond.
 
 ---
 
@@ -349,12 +484,25 @@ translate_toi_data_v2.py             | Rosetta Stone for TESS + Kepler.
 test_rf_on_toi.py                    | The stress test. The crash.
 ```
 
-### `// Act III: Redemption`
+### `// Act III: Redemption - TESS Track`
 ```
 unified_dataset.csv                  | The balanced, no-cheat-codes dataset.
 unified_model_v1.py                  | First attempt. 73%. Learning.
 unified_model_tuned_v2.py            | GridSearchCV upgrade. 74%. Smarter.
 unified_model_smote_v3.py            | SMOTE-balanced. Fair. Wise.
+```
+
+### `// Act III: Redemption - K2 Track`
+```
+k2_featuremap.py                     | Feature intersection & surgical imputation.
+k2_randomforest.py                   | Weighted RF. Fairness baseline. 88.31% F1.
+k2_randomforest.py (optimized)       | Randomized search. Smarter. 89.27% F1.
+k2_xgboost.py                        | The champion model (pending execution).
+```
+
+### `// Act III: Final Convergence (Pending)`
+```
+mega_unified_model.py                | The final integration. All missions. One model.
 ```
 
 All charts, confusion matrices, and visual proof live in `/charts`.  
@@ -384,10 +532,19 @@ Real-world deployment means encountering data that doesn't come with an answer k
 
 ### `> Fairness > Raw Performance`
 A 74% model that's balanced and generalizes is better than a 94% specialist that only works in one scenario.
+K2's 89% model with 66% minority recall proves this principle.
 
 ### `> Cross-Mission Validation is Critical`
 If your model can't handle data from a related but different source, it's not production-ready.  
 TESS wasn't just a test — it was a reality check.
+K2 was the proof of concept.
+
+### `> Surgical Imputation > Aggressive Drops`
+When datasets don't align perfectly, strategic imputation (like "zero signal = no transit") beats nuking entire columns.
+
+### `> Class Imbalance is a Silent Killer`
+The K2 dataset's 4:1 imbalance nearly sabotaged the entire mission.
+Weighted models and SMOTE saved it.
 
 ---
 
@@ -405,6 +562,8 @@ tqdm                      # Terminal progress bars
 ```
 
 ### `> Key Features (Post-Cheat-Code Era)`
+
+**TESS/Kepler Unified Features:**
 ```diff
 + koi_model_snr           -> Signal-to-noise ratio. The real MVP.
 + koi_depth               -> Transit depth
@@ -416,9 +575,22 @@ tqdm                      # Terminal progress bars
 - koi_fpflag_*            -> REMOVED from unified models. Learned our lesson.
 ```
 
+**K2/PS Generalized Features (21 total):**
+```diff
++ pl_orbper               -> Orbital period
++ pl_trandep              -> Transit depth
++ pl_trandur              -> Transit duration
++ st_teff                 -> Stellar effective temperature
++ st_rad                  -> Stellar radius
++ st_mass                 -> Stellar mass
++ (and 15 more...)        -> Universal physical parameters
+```
+
 ### `> Model Evolution`
 
 <div align="center">
+
+**TESS Track:**
 
 | Model | Accuracy | Method | Generalization |
 |-------|----------|--------|----------------|
@@ -429,16 +601,28 @@ tqdm                      # Terminal progress bars
 | Unified Tuned (Act III) | 74% | + GridSearchCV | Good |
 | Unified SMOTE (Act III) | 74% | + Balancing | **Excellent** |
 
+**K2 Track:**
+
+| Model | Weighted F1 | Confirmed Recall | Method |
+|-------|-------------|------------------|--------|
+| Baseline Weighted RF | 88.31% | 62.77% | Balanced weights |
+| Optimized RF | **89.27%** | **66.07%** | Randomized search |
+| XGBoost (Pending) | TBD | TBD | Champion test |
+
 </div>
 
 ### `> Validation Strategy`
 ```
 Segmented validation
-  -> Separate scoring for Kepler vs. TESS to detect bias
+  -> Separate scoring for different mission data to detect bias
 Cross-mission testing
   -> Train on one mission, validate on another
-SMOTE balancing
-  -> Synthetic oversampling for minority classes
+Class balancing
+  -> SMOTE for TESS, weighted classes for K2
+Feature intersection
+  -> Only use features that exist across all missions
+Surgical imputation
+  -> Strategic zero-fills for missing transit signals
 ```
 
 ---
@@ -460,11 +644,27 @@ STATUS: Re-aligned to Kepler schema via translate_toi_data_v2.py
         Missing columns interpolated or zero-padded
 ```
 
-**Unified Dataset**
+**K2 Dataset**
 ```
-SOURCE: Combined Kepler + TESS
-SIZE:   Cross-mission merged data
+SOURCE: NASA K2 Mission (Kepler's second life)
+SIZE:   K2 confirmed and candidate planets
+STATUS: Feature-mapped to generalized parameter set (21 features)
+```
+
+**Planetary Systems Archive (PS)**
+```
+SOURCE: NASA Exoplanet Archive - Planetary Systems Composite Data
+SIZE:   Cross-mission exoplanet catalog
+STATUS: Augmented with K2 transit features via surgical imputation
+        Class imbalance: 4:1 (Not Confirmed : Confirmed)
+```
+
+**Unified Datasets**
+```
+SOURCE: Combined mission data (TESS+Kepler, K2+PS)
+SIZE:   Cross-mission merged archives
 STATUS: No koi_fpflag_* columns. Pure signal-based features only.
+        Balanced via SMOTE or weighted training.
 ```
 
 ---
@@ -532,16 +732,27 @@ Freedom to Improve
   THREE-ACT STRUCTURE: COMPLETE
   HUBRIS ACKNOWLEDGED
   HUMILITY INTEGRATED
-  REDEMPTION ACHIEVED
+  REDEMPTION ACHIEVED (x2 Parallel Tracks)
 
-  Current Model State:
+  TESS Track Status:
     -> Accuracy: ~74% (unified, cross-mission validated)
     -> Bias: Minimized via SMOTE
     -> Generalization: Confirmed across Kepler + TESS
     -> Intelligence: Learning physics, not flags
 
+  K2 Track Status:
+    -> Weighted F1: 89.27% (optimized, balanced)
+    -> Confirmed Recall: 66.07% (minority class)
+    -> Generalization: Confirmed across K2 + PS Archive
+    -> Intelligence: Learning physics via feature intersection
+
+  FINAL CONVERGENCE: PENDING
+  -> Merging TESS + K2 unified models
+  -> Creating cross-mission mega-classifier
+  -> One model. All missions. Pure physics.
+
   [ALL SYSTEMS NOMINAL]
-  [WAITING FOR NEXT TRANSMISSION...]
+  [WAITING FOR FINAL INTEGRATION...]
 ----------------------------------------------------------------------
 ```
 
@@ -555,6 +766,7 @@ Freedom to Improve
 ======================================================================
                      End of Line // KEPLER OUT
           This wasn't just a project. It was a journey.
+                And the journey isn't over yet.
                       Transmission Complete
 ======================================================================
 ```
