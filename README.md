@@ -33,8 +33,8 @@ We're sifting through NASA's deep-space archives — hunting for the real exopla
 This is **space forensics**.
 We're here to **expose the fakes** and **crown the real ones**.
 
-But here's the twist: this project became a story about *hubris, humility, and redemption*.
-What started as a simple classifier turned into a three-act journey through the harsh realities of machine learning in the wild.
+**Born from the NASA Space Apps Challenge 2024**, this project started as a hackathon submission but evolved into something bigger — a story about *hubris, humility, and redemption*.
+What began as a simple classifier turned into a three-act journey through the harsh realities of machine learning in the wild.
 
 Let's vibe.
 
