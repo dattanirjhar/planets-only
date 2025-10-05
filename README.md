@@ -1,8 +1,8 @@
-# `> K E P L E R // a vibe check`
+# `> A E G I S // a vibe check`
 
 ![NASA](https://img.shields.io/badge/SpaceApps-000000?style=for-the-badge&logo=nasa)
 ![Planets Only!](https://img.shields.io/badge/planets%20only!-FFFFFF?style=for-the-badge&logo=saturn&logoColor=black)
-![KEPLER](https://img.shields.io/badge/KEPLER-00B496?style=for-the-badge)
+![AEGIS](https://img.shields.io/badge/AEGIS-00B496?style=for-the-badge)
 ![EXOPLANETS](https://img.shields.io/badge/EXOPLANETS-EB5559?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dattanirjhar/planets-only?display_timestamp=committer&style=for-the-badge&logo=github)
 ![GitHub Created At](https://img.shields.io/github/created-at/dattanirjhar/planets-only?style=for-the-badge&logo=github)
@@ -26,7 +26,7 @@
 ============================================================================
 ```
 
-Yo. So you found **Project KEPLER**.  
+Yo. So you found **Project AEGIS**.  
 This isn’t your average data science gig.  
 We’re sifting through NASA’s deep-space archives — hunting for the real exoplanets hiding among the noise, lies, and cosmic impostors.
 
@@ -629,7 +629,7 @@ final_production.py                 | Complete automated training + export pipel
 
 ```
 ======================================================================
-                     End of Line // KEPLER OUT
+                     End of Line // AEGIS OUT
           This wasn't just a project. It was a journey.
             From hubris to humility — to convergence.
 ======================================================================
